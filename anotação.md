@@ -1,31 +1,40 @@
 # Estrutura do projeto (Vite)
 
-# HTML principal
+## HTML principal
+
 index.html
 
-# CSS
+## CSS
+
 src/style.css
 
-# JavaScript principal
+## JavaScript principal
+
 src/main.js
 
-# Assets (imagens, etc.)
+## Assets (imagens, etc.)
+
 src/assets/
 
-# Dependências
-# NÃO apagar:
+## Dependências
+
+### NÃO apagar
+
 package.json
 package-lock.json
 
-# node_modules NÃO vai pro Git
+## node_modules NÃO vai pro Git
 
-# Trabalhando em outro PC
+## Trabalhando em outro PC
+
 git pull
 npm install
 npm run dev
 
-# Rodar o projeto
+## Rodar o projeto
+
 npm run dev
 
-# Gerar build (deploy)
+## Gerar build (deploy)
+
 npm run build

@@ -3,11 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Meu site</title>
   </head>
   <body>
-    <div id="app"></div>
-    <h1>Hello My Organization</h1>
+    <!--MENU-->
+    <header>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#membros">Membros</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!--HOME-->
+    <section id="home">
+      <h1>Bem-Vindo ao nosso grupo</h1>
+      <p>Esse site é sobre vivência escolar e projetos escolares</p>
+    </section>
+
+    <!--SOBRE-->
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos um grupo cursando Desenvolvimento de Sistemas na Escola Estadual
+        Coronel Bonifácio de Carvalho
+      </p>
+    </section>
+
+    <!--MEMBROS-->
+    <section id="membros">
+      <h2>Membros</h2>
+
+      <div id="grupo">
+        <article id="membro-1">
+          <p>Luiz Gabryel - Estudante em Desenvolvimento de Sistemas</p>
+          <p>Programação em Jogos 3D na Etec Heliopolis (Cancelado)</p>
+          <p>Projetos Feitos:</p>
+          <ul>
+            <li>Sistema de Controle de Estoque em Python (Terminal)</li>
+            <li>Portfólio</li>
+            <li>Repositório de estudo em Javascript</li>
+            <li>Sistema de Controle de Estoque (Site)</li>
+          </ul>
+        </article>
+
+        <article id="membro-2">
+          <p>Viviane da Silva - Estudante de Desenvolvimento de Sistemas</p>
+        </article>
+
+        <article id="membro-3">
+          <p>Gustavo - Estudante de Desenvolvimento de Sistemas</p>
+        </article>
+      </div>
+    </section>
+
+    <!--EVENTOS-->
+    <section id="eventos">
+      <h2>Participação em Eventos</h2>
+      <div id="cards">
+        <article class="card-evento">
+          <h3>Senai - São Caetano</h3>
+          <p>Iremos visitar por x motivo<br />Dia 15/05/2025</p>
+        </article>
+      </div>
+    </section>
+
+    <!--CONTATO-->
+    <section id="contato">
+      <h2>Contatos</h2>
+      <p>Luiz - (11) 98901-7556</p>
+      <p>luizgabryel515@gmail.com</p>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+      <p>Desenvolvido por</p>
+      <div id="devs">
+        <div class="dev">
+          <img src="./src/assets/sua-foto.jpg" alt="Foto de Luiz" />
+          <p>Luiz - Aster</p>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
