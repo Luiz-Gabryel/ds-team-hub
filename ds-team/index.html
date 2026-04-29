@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="icon" href="src/assets/favicon.ico" />
-
     <title>2ºDS Team</title>
   </head>
   <body>
+    <!--CARREGAMENTO-->
+    <div id="loading">
+      <p id="texto"></p>
+    </div>
     <!--MENU-->
     <header>
       <nav class="navbar">
@@ -21,71 +24,48 @@
         </ul>
       </nav>
     </header>
-    <hr />
 
     <!--HOME-->
-    <section id="home">
+    <section id="home" class="secao">
       <h1>Bem-Vindo ao nosso grupo</h1>
       <p>Esse site é sobre vivência escolar e projetos escolares</p>
     </section>
-    <hr />
 
     <!--SOBRE-->
-    <section id="sobre">
+    <section id="sobre" class="secao">
       <h2>Sobre Nós</h2>
       <p>
         Somos um grupo cursando Desenvolvimento de Sistemas na Escola Estadual
         Coronel Bonifácio de Carvalho
       </p>
     </section>
-    <hr />
 
     <!--MEMBROS-->
-    <section id="membros">
+    <section id="membros" class="secao">
       <h2>Membros</h2>
-
       <div id="grupo">
         <article id="membro-1">
           <div class="avatar">LG</div>
           <p class="membro-nome">Luiz Gabryel</p>
-          <p class="membro-cargo">Estudante de Desenvolvimento de Sistemas</p>
-          <p class="membro-extra">
-            Programação em Jogos 3D — Etec Heliopolis (Cancelado)
-          </p>
-          <p class="projetos-titulo">Projetos</p>
-          <ul class="projetos-lista">
-            <li>Sistema de Controle de Estoque em Python (Terminal)</li>
-            <li>Sistema de Controle de Estoque (Site)</li>
-            <li>Portfólio pessoal</li>
-            <li>Repositório de atividades JavaScript</li>
-            <li>Loja de Games</li>
-          </ul>
-          <p class="projetos-titulo">Tecnologias</p>
-          <ul class="projetos-lista">
-            <li>Python · HTML · CSS · JavaScript</li>
-            <li>FastAPI · SQLAlchemy · Supabase</li>
-          </ul>
+          <p class="membro-cargo">Estudante de DS</p>
         </article>
 
         <article id="membro-2">
           <div class="avatar">VS</div>
           <p class="membro-nome">Viviane da Silva</p>
-          <p class="membro-cargo">Estudante de Desenvolvimento de Sistemas</p>
-          <p class="membro-extra">Iniciando os estudos em programação.</p>
+          <p class="membro-cargo">Estudante de DS</p>
         </article>
 
         <article id="membro-3">
           <div class="avatar">GU</div>
           <p class="membro-nome">Gustavo</p>
-          <p class="membro-cargo">Estudante de Desenvolvimento de Sistemas</p>
-          <p class="membro-extra">Iniciando os estudos em programação.</p>
+          <p class="membro-cargo">Estudante de DS</p>
         </article>
       </div>
     </section>
-    <hr />
 
     <!--EVENTOS-->
-    <section id="eventos">
+    <section id="eventos" class="secao">
       <h2>Participação em Eventos</h2>
       <div id="cards">
         <article class="card-evento">
@@ -98,15 +78,28 @@
         </article>
       </div>
     </section>
-    <hr />
 
     <!--CONTATO-->
-    <section id="contato">
+    <section id="contato" class="secao">
       <h2>Contatos</h2>
-      <p>Luiz — (11) 98901-7556</p>
-      <p>luizgabryel515@gmail.com</p>
+
+      <p>
+        Luiz —
+        <a
+          href="https://api.whatsapp.com/send?phone=5511989017556&text=Ol%C3%A1!%20Tudo%20bem%3F%20%C3%89%20um%20prazer%20te%20conhecer."
+          target="_blank"
+          >(11) 98901-7556</a
+        >
+      </p>
+
+      <p>
+        <a
+          href="mailto:luizgabryel515@gmail.com?subject=Mensagem%20do%20site%202%C2%BADS&body=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20do%20grupo%202%C2%BADS.%0A%0ANome%3A%0AMensagem%3A"
+          target="_blank"
+          >luizgabryel515@gmail.com</a
+        >
+      </p>
     </section>
-    <hr />
 
     <!--FOOTER-->
     <footer>
@@ -114,7 +107,6 @@
       <div id="devs">
         <div class="dev">
           <img src="./src/assets/luiz-icon.jpeg" alt="Foto de Luiz" />
-
           <p>Luiz - Aster</p>
         </div>
       </div>
