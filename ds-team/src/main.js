@@ -1,3 +1,10 @@
+import { initFaq } from "./faq.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initFaq();
+});
+
+
 window.addEventListener('load', () => {
   const texto = "Bem-Vindo ao meu Grupo - 2ºDS";
   const elemento = document.getElementById("texto");
@@ -18,5 +25,3 @@ window.addEventListener('load', () => {
 
   digitar();
 });
-
-
