@@ -113,7 +113,13 @@ body {
   max-width: 260px;
   color: #FBE4D8;
 }
+.membro-info {
+  display: none;
+}
 
+.membro.active .membro-info {
+  display: block;
+}
 .avatar {
   color: #FBE4D8;
   width: 48px;
