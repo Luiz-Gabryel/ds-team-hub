@@ -12,17 +12,57 @@
     <div id="loading">
       <p id="texto"></p>
     </div>
+
     <!--MENU-->
-    <header>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#membros">Membros</a></li>
-          <li><a href="#eventos">Eventos</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav__logo">
+          <img src="src/assets/favicon.ico" alt="2ºDS" />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#home" class="nav__link"
+                ><span>Home</span><span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#sobre" class="nav__link"
+                ><span>Sobre</span><span>Sobre</span></a
+              >
+            </li>
+            <li>
+              <a href="#membros" class="nav__link"
+                ><span>Membros</span><span>Membros</span></a
+              >
+            </li>
+            <li>
+              <a href="#eventos" class="nav__link"
+                ><span>Eventos</span><span>Eventos</span></a
+              >
+            </li>
+            <li>
+              <a href="#galeria" class="nav__link"
+                ><span>Galeria</span><span>Galeria</span></a
+              >
+            </li>
+            <li>
+              <a href="#contato" class="nav__link"
+                ><span>Contato</span><span>Contato</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav__buttons">
+          <button class="nav__email" id="nav-email">
+            <span id="nav-copy">luizgabryel515@gmail.com</span>
+            <span id="nav-text">Copiar email</span>
+          </button>
+          <button class="nav__toggle" id="nav-toggle">
+            <i class="nav__burger">☰</i>
+            <i class="nav__close">✕</i>
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -41,25 +81,22 @@
       </p>
     </section>
 
-    <!-- FAQ -->
+    <!--FAQ-->
     <section id="faq" class="secao">
       <h2>Perguntas Frequentes</h2>
-
       <div class="faq-item">
-        <button class="faq-title">O que é esse projeto</button>
+        <button class="faq-title">O que é esse projeto?</button>
         <div class="faq-content">
           É um site criado pelo O Trio do 2º ano de Desenvolvimento de Sistemas.
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-title">Quem pode participar?</button>
         <div class="faq-content">
           Alunos da Turma do curso técnico de DS no Coronel Bonifácio de
-          Carvalho
+          Carvalho.
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-title">Qual o objetivo do site?</button>
         <div class="faq-content">
@@ -76,12 +113,10 @@
           <div class="avatar">LG</div>
           <p class="membro-nome">Luiz Gabryel</p>
           <p class="membro-cargo">Estudante de DS</p>
-
           <div class="membro-info">
             <p>Gosta de programação e música.</p>
           </div>
         </article>
-
         <article class="membro">
           <div class="avatar">VS</div>
           <p class="membro-nome">Viviane da Silva</p>
@@ -90,7 +125,6 @@
             <p>Gosta de Gatos, Gosta de Rap Geek.</p>
           </div>
         </article>
-
         <article class="membro">
           <div class="avatar">GU</div>
           <p class="membro-nome">Gustavo Arcala</p>
@@ -116,22 +150,20 @@
         </article>
       </div>
     </section>
-<!--GALERIA-->
+
+    <!--GALERIA-->
     <section id="galeria" class="secao">
       <h2>Bem-Vindo a nossa Galeria</h2>
-      <div id="card" class="secao">
+      <div id="card">
         <article class="card-galeria">
           <h3>Nossas Fotos</h3>
-
         </article>
       </div>
-      <p>Essea e nossas fotos</p>
     </section>
 
     <!--CONTATO-->
     <section id="contato" class="secao">
       <h2>Contatos</h2>
-
       <p>
         Luiz —
         <a
@@ -140,7 +172,6 @@
           >(11) 98901-7556</a
         >
       </p>
-
       <p>
         <a
           href="mailto:luizgabryel515@gmail.com?subject=Mensagem%20do%20site%202%C2%BADS&body=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20do%20grupo%202%C2%BADS.%0A%0ANome%3A%0AMensagem%3A"
@@ -149,6 +180,7 @@
         >
       </p>
     </section>
+
     <!--FOOTER-->
     <footer>
       <p class="footer-titulo">Desenvolvido por</p>
