@@ -34,7 +34,7 @@ body {
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 10px;
 }
 
 .navbar a {
@@ -172,6 +172,26 @@ body {
   opacity: 0.8;
   margin-bottom: 4px;
 }
+/* ===== GALERIA ===== */
+#galeria{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background-color: #3D1A6E;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 200px;
+  max-width: 100%;
+  color: #FBE4D8;
+  max-height: 1000px;
+}
+
+#galeria h2{
+display: flex;
+justify-content: end;
+}
+
+
 /* ===== CONTATOS ===== */
 a {
   color: #7c4dff;
@@ -216,3 +236,11 @@ footer {
 }
 
 
+/*===== NAVBAR =====*/
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+  }
+}
