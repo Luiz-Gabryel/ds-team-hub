@@ -70,11 +70,12 @@ body {
 }
 
 .faq-title{
+  color: #b179b1;
   width: 100%;
   text-align: left;
   padding: 12px;
   font-weight: bold;
-  background-color: #2B124C;
+  background-color: #2B124C; 
   border: none;
   cursor: pointer;
 }
