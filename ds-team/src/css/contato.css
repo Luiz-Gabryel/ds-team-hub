@@ -1,0 +1,7 @@
+#contato a {
+  color: #7c4dff;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}

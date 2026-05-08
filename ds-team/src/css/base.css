@@ -1,0 +1,39 @@
+:root {
+  --header-height: 3.5rem;
+  --first-color: #854f6c;
+  --black-color: #2b124c;
+  --white-color: #fbe4d8;
+  --nav-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.3);
+  --body-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  padding: 20px;
+  padding-top: 100px;
+  background-color: #190019;
+  color: #fbe4d8;
+}
+
+#home,
+#sobre,
+#membros,
+#eventos,
+#galeria,
+#contato,
+#faq {
+  background-color: #2b124c;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

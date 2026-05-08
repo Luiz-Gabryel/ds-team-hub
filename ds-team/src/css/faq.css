@@ -1,0 +1,37 @@
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-title {
+  color: #b179b1;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+  background-color: #2b124c;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-title:hover {
+  background-color: #2b124c;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 12px;
+  color: #fbe4d8;
+  background: #854f6c;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 200px;
+  padding: 12px;
+}
