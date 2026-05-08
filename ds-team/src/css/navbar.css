@@ -77,14 +77,13 @@
 .nav__toggle {
   width: 32px;
   height: 32px;
-  display: grid;
-  place-items: center;
   background: none;
   border: none;
   color: var(--white-color);
   font-size: 1.5rem;
   cursor: pointer;
   position: relative;
+  display: none;
 }
 
 .nav__burger,
@@ -144,11 +143,17 @@
 }
 
 @media screen and (max-width: 1150px) {
+  .nav__toggle {
+    display: grid;
+    place-items: center;
+  }
+
   .nav__menu {
     position: fixed;
-    top: 1.5rem;
+    top: 5rem;
     left: 0;
     right: 0;
+    z-index: 101;
     background-color: var(--black-color);
     margin-inline: 1rem;
     padding-block: 4rem;
