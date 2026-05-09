@@ -36,6 +36,13 @@ export function initEaster() {
     }, 3000);
   }
 
+  const membros = document.querySelectorAll(".membro");
+  const textosOriginais = [];
+  membros.forEach((membro) => {
+    const info = membro.querySelector(".membro-info p");
+    textosOriginais.push(info.textContent);
+  });
+
   document.addEventListener("keydown", (e) => {
     digitado.push(e.key.toLowerCase());
 
@@ -61,14 +68,23 @@ export function initEaster() {
       if (!ativado2) {
         mostrarToast("Código do O Trio ativado!");
         ativado2 = true;
+
+        membros.forEach((membro) => {
+          const info = membro.querySelector(".membro-info p");
+          info.textContent = membro.dataset.frase;
+        });
       } else {
         mostrarToast("Código do O Trio desativado!");
         ativado2 = false;
+
+        membros.forEach((membro, i) => {
+          const info = membro.querySelector(".membro-info p");
+          info.textContent = textosOriginais[i];
+        });
       }
 
       digitado.length = 0;
     }
-
     if (texto.includes(codigo3.join(""))) {
       if (!ativado3) {
         mostrarToast("Código do Luiz ativado!");
@@ -88,7 +104,6 @@ export function initEaster() {
       } else {
         mostrarToast("Código da Viviane desativado!");
         ativado4 = false;
-        // "Não se esqueça de nada. Lembre-se de tudo e supere. Se não superar, sempre será uma criança cuja alma nunca floresce." — Tudo bem não ser normal
       }
 
       digitado.length = 0;
