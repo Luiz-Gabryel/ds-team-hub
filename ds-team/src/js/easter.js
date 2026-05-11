@@ -136,8 +136,9 @@ export function initEaster() {
 
         ativado5 = true;
 
-        const som = new Audio("/za_warudo.mp3");
-        som.play();
+        const som = new Audio("/za_warudo.wav");
+        som.load();
+        som.play().catch(() => mostrarToast("Ative o som!"));
 
         timerEscalaDeCinza = setTimeout(() => {
           atualizarFiltros();
