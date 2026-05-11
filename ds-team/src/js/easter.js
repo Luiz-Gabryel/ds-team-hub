@@ -120,7 +120,7 @@ export function initEaster() {
       if (!ativado5) {
         mostrarToast("Código do Gustavo ativado!");
         ativado5 = true;
-        const som = new Audio('./src/sons/za_warudo.mp3');
+        const som = new Audio('./src/sons/za_warudo.mp3'); //arumar dps
         som.play();
         timerEscalaDeCinza = setTimeout(() => {
           document.body.style.filter = "grayscale(100%)";
