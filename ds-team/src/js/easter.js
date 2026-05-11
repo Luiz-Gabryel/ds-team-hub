@@ -97,6 +97,8 @@ export function initEaster() {
       } else {
         mostrarToast("Código do Luiz desativado!");
         ativado3 = false;
+        document.body.style.transform = 'rotate(0deg)';
+
       }
 
       digitado.length = 0;
