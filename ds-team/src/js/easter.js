@@ -13,7 +13,18 @@ export function initEaster() {
   let ativado5 = false;
   let ativado6 = false;
 
+  let timerEscalaDeCinza = null;
+
   const digitado = [];
+
+  function atualizarFiltros() {
+    const filtros = [];
+
+    if (ativado1) filtros.push("invert(1)");
+    if (ativado5) filtros.push("grayscale(100%)");
+
+    document.body.style.filter = filtros.join(" ");
+  }
 
   function mostrarToast(mensagem) {
     const toast = document.createElement("div");
@@ -38,6 +49,7 @@ export function initEaster() {
 
   const membros = document.querySelectorAll(".membro");
   const textosOriginais = [];
+
   membros.forEach((membro) => {
     const info = membro.querySelector(".membro-info p");
     textosOriginais.push(info.textContent);
@@ -49,105 +61,107 @@ export function initEaster() {
     if (digitado.length > 20) {
       digitado.shift();
     }
+
     const texto = digitado.join("");
+
+    // 2DS
     if (texto.includes(codigo1.join(""))) {
-      if (!ativado1) {
-        mostrarToast("Código do 2DS ativado!");
-        ativado1 = true;
-        document.body.style.filter = "invert(1)";
-      } else {
-        mostrarToast("Código do 2DS desativado!");
-        ativado1 = false;
-        document.body.style.filter = "";
-      }
+      ativado1 = !ativado1;
+
+      mostrarToast(
+        ativado1 ? "Código do 2DS ativado!" : "Código do 2DS desativado!",
+      );
+
+      atualizarFiltros();
 
       digitado.length = 0;
     }
 
+    // O Trio
     if (texto.includes(codigo2.join(""))) {
-      if (!ativado2) {
-        mostrarToast("Código do O Trio ativado!");
-        ativado2 = true;
+      ativado2 = !ativado2;
 
-        membros.forEach((membro) => {
-          const info = membro.querySelector(".membro-info p");
-          info.textContent = membro.dataset.frase;
-        });
-      } else {
-        mostrarToast("Código do O Trio desativado!");
-        ativado2 = false;
+      mostrarToast(
+        ativado2 ? "Código do O Trio ativado!" : "Código do O Trio desativado!",
+      );
 
-        membros.forEach((membro, i) => {
-          const info = membro.querySelector(".membro-info p");
-          info.textContent = textosOriginais[i];
-        });
-      }
+      membros.forEach((membro, i) => {
+        const info = membro.querySelector(".membro-info p");
+
+        info.textContent = ativado2 ? membro.dataset.frase : textosOriginais[i];
+      });
 
       digitado.length = 0;
     }
+
+    // Luiz
     if (texto.includes(codigo3.join(""))) {
-      if (!ativado3) {
-        mostrarToast("Código do Luiz ativado!");
-        ativado3 = true;
+      ativado3 = !ativado3;
+
+      mostrarToast(
+        ativado3 ? "Código do Luiz ativado!" : "Código do Luiz desativado!",
+      );
+
+      document.body.style.transition = "transform 0.6s ease";
+      document.body.style.transform = ativado3
+        ? "rotate(180deg)"
+        : "rotate(0deg)";
+
+      if (ativado3) {
         setTimeout(() => {
-          document.body.style.transform = 'rotate(180deg)';
-        alert("Sakasama Yokoshima Happō Fusagari.")
-      }, 300);
-        
-      } else {
-        mostrarToast("Código do Luiz desativado!");
-        ativado3 = false;
-        document.body.style.transform = 'rotate(0deg)';
-
+          mostrarToast("Sakasama Yokoshima Happō Fusagari.");
+        }, 700);
       }
 
       digitado.length = 0;
     }
 
+    // Viviane
     if (texto.includes(codigo4.join(""))) {
-      if (!ativado4) {
-        mostrarToast("Código da Viviane ativado!");
-        ativado4 = true;
-      } else {
-        mostrarToast("Código da Viviane desativado!");
-        ativado4 = false;
-      }
+      ativado4 = !ativado4;
+
+      mostrarToast(
+        ativado4
+          ? "Código da Viviane ativado!"
+          : "Código da Viviane desativado!",
+      );
 
       digitado.length = 0;
     }
 
+    // Gustavo
     if (texto.includes(codigo5.join(""))) {
       if (!ativado5) {
         mostrarToast("Código do Gustavo ativado!");
+
         ativado5 = true;
-        const som = new Audio('./public/za_warudo.mp3'); //arumar dps ./public/sons/za_warudo.mp3
+
+        const som = new Audio("/za_warudo.mp3");
         som.play();
+
         timerEscalaDeCinza = setTimeout(() => {
-          document.body.style.filter = "grayscale(100%)";
+          atualizarFiltros();
         }, 4000);
       } else {
         mostrarToast("Código do Gustavo desativado!");
-        alert('Tesste')
+
         ativado5 = false;
+
+        clearTimeout(timerEscalaDeCinza);
+
+        atualizarFiltros();
       }
-      // } else {
-      //   
-      //   ativado5 = false;
-      //   document.body.style.filter = "";
-      //   alert('Tesste')
-      // }
 
       digitado.length = 0;
     }
 
+    // Aster
     if (texto.includes(codigo6.join(""))) {
-      if (!ativado6) {
-        mostrarToast("Código do Aster ativado!");
-        ativado6 = true;
-      } else {
-        mostrarToast("Código do Aster desativado!");
-        ativado6 = false;
-      }
+      ativado6 = !ativado6;
+
+      mostrarToast(
+        ativado6 ? "Código do Aster ativado!" : "Código do Aster desativado!",
+      );
 
       digitado.length = 0;
     }
