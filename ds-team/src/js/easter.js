@@ -92,7 +92,7 @@ export function initEaster() {
         setTimeout(() => {
           document.body.style.transform = 'rotate(180deg)';
         alert("Sakasama Yokoshima Happō Fusagari.")
-      }, 3000);
+      }, 300);
         
       } else {
         mostrarToast("Código do Luiz desativado!");
@@ -120,9 +120,17 @@ export function initEaster() {
       if (!ativado5) {
         mostrarToast("Código do Gustavo ativado!");
         ativado5 = true;
+        const som = new Audio('./src/sons/za_warudo.mp3');
+        som.play();
+        timerEscalaDeCinza = setTimeout(() => {
+          document.body.style.filter = "grayscale(100%)";
+        }, 4000);
+        
       } else {
         mostrarToast("Código do Gustavo desativado!");
         ativado5 = false;
+        document.body.style.filter = "";
+
       }
 
       digitado.length = 0;
