@@ -89,6 +89,11 @@ export function initEaster() {
       if (!ativado3) {
         mostrarToast("Código do Luiz ativado!");
         ativado3 = true;
+        setTimeout(() => {
+          document.body.style.transform = 'rotate(180deg)';
+        alert("Sakasama Yokoshima Happō Fusagari.")
+      }, 3000);
+        
       } else {
         mostrarToast("Código do Luiz desativado!");
         ativado3 = false;
