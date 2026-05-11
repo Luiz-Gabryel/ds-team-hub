@@ -1,68 +1,94 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="src/assets/favicon.ico" />
+
+    <!-- Ícone -->
+    <link rel="icon" type="image/x-icon" href="./src/assets/favicon.ico" />
+
+    <!-- Título -->
     <title>2ºDS Team</title>
   </head>
+
   <body>
-    <!--CARREGAMENTO-->
+    <!-- CARREGAMENTO -->
     <div id="loading">
       <p id="texto"></p>
     </div>
 
-    <!--MENU-->
+    <!-- MENU -->
     <header class="header">
       <nav class="nav">
-        <a href="#" class="nav__logo">
-          <img src="src/assets/favicon.ico" alt="2ºDS" />
+        <a href="#home" class="nav__logo">
+          <img src="./src/assets/favicon.ico" alt="Logo 2ºDS Team" />
         </a>
+
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li>
-              <a href="#home" class="nav__link"
-                ><span>Home</span><span>Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#sobre" class="nav__link"
-                ><span>Sobre</span><span>Sobre</span></a
-              >
-            </li>
-            <li>
-              <a href="#faq" class="nav__link">
-                <span>FAQ</span><span>FAQ</span>
+              <a href="#home" class="nav__link">
+                <span>Home</span>
+                <span>Home</span>
               </a>
             </li>
+
             <li>
-              <a href="#membros" class="nav__link"
-                ><span>Membros</span><span>Membros</span></a
-              >
+              <a href="#sobre" class="nav__link">
+                <span>Sobre</span>
+                <span>Sobre</span>
+              </a>
             </li>
+
             <li>
-              <a href="#eventos" class="nav__link"
-                ><span>Eventos</span><span>Eventos</span></a
-              >
+              <a href="#faq" class="nav__link">
+                <span>FAQ</span>
+                <span>FAQ</span>
+              </a>
             </li>
+
             <li>
-              <a href="#galeria" class="nav__link"
-                ><span>Galeria</span><span>Galeria</span></a
-              >
+              <a href="#membros" class="nav__link">
+                <span>Membros</span>
+                <span>Membros</span>
+              </a>
             </li>
+
             <li>
-              <a href="#contato" class="nav__link"
-                ><span>Contato</span><span>Contato</span></a
-              >
+              <a href="#eventos" class="nav__link">
+                <span>Eventos</span>
+                <span>Eventos</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#galeria" class="nav__link">
+                <span>Galeria</span>
+                <span>Galeria</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#contato" class="nav__link">
+                <span>Contato</span>
+                <span>Contato</span>
+              </a>
             </li>
           </ul>
         </div>
+
         <div class="nav__buttons">
-          <button class="nav__email" id="nav-email">
+          <button class="nav__email" id="nav-email" type="button">
             <span id="nav-copy">luizgabryel515@gmail.com</span>
             <span id="nav-text">Copiar email</span>
           </button>
-          <button class="nav__toggle" id="nav-toggle">
+
+          <button
+            class="nav__toggle"
+            id="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+          >
             <span class="nav__burger">☰</span>
             <span class="nav__close">✕</span>
           </button>
@@ -70,135 +96,200 @@
       </nav>
     </header>
 
-    <!--HOME-->
-    <section id="home" class="secao">
-      <h1>Bem-Vindo ao nosso grupo</h1>
-      <p>Esse site é sobre vivência escolar e projetos escolares</p>
-    </section>
+    <main>
+      <!-- HOME -->
+      <section id="home" class="secao">
+        <h1>Bem-vindo ao nosso grupo</h1>
 
-    <!--SOBRE-->
-    <section id="sobre" class="secao">
-      <h2>Sobre Nós</h2>
-      <p>
-        Somos um grupo cursando Desenvolvimento de Sistemas na Escola Estadual
-        Coronel Bonifácio de Carvalho
-      </p>
-    </section>
+        <p>
+          Este site é sobre vivência escolar, projetos e experiências do curso
+          técnico de Desenvolvimento de Sistemas.
+        </p>
+      </section>
 
-    <!--FAQ-->
-    <section id="faq" class="secao">
-      <h2>Perguntas Frequentes</h2>
-      <div class="faq-item">
-        <button class="faq-title">O que é esse projeto?</button>
-        <div class="faq-content">
-          É um site criado pelo O Trio do 2º ano de Desenvolvimento de Sistemas.
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-title">Quem pode participar?</button>
-        <div class="faq-content">
-          Alunos da Turma do curso técnico de DS no Coronel Bonifácio de
-          Carvalho.
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-title">Qual o objetivo do site?</button>
-        <div class="faq-content">
-          Mostrar projetos, eventos e informações do grupo.
-        </div>
-      </div>
-    </section>
+      <!-- SOBRE -->
+      <section id="sobre" class="secao">
+        <h2>Sobre Nós</h2>
 
-    <!--MEMBROS-->
-    <section id="membros" class="secao">
-      <h2>Membros</h2>
-      <div id="grupo">
-        <article class="membro" data-frase="XXXX">
-          <div class="avatar">LG</div>
-          <p class="membro-nome">Luiz Gabryel</p>
-          <p class="membro-cargo">Estudante de DS</p>
-          <div class="membro-info"><p>Gosta de programação e música.</p></div>
-        </article>
-        <article
-          class="membro"
-          data-frase="'Não se esqueça de nada. Lembre-se de tudo e supere.' — Tudo bem não ser normal"
-        >
-          <div class="avatar">VS</div>
-          <p class="membro-nome">Viviane da Silva</p>
-          <p class="membro-cargo">Estudante de DS</p>
-          <div class="membro-info">
-            <p>Gosta de Gatos, Gosta de Rap Geek.</p>
+        <p>
+          Somos um grupo do curso técnico de Desenvolvimento de Sistemas da
+          Escola Estadual Coronel Bonifácio de Carvalho.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="secao">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+          <button class="faq-title" type="button">O que é esse projeto?</button>
+
+          <div class="faq-content">
+            <p>
+              É um site criado pelo trio do 2º ano de Desenvolvimento de
+              Sistemas.
+            </p>
           </div>
-        </article>
-        <article class="membro" data-frase="XXXX">
-          <div class="avatar">GU</div>
-          <p class="membro-nome">Gustavo Arcala</p>
-          <p class="membro-cargo">Estudante de DS</p>
-          <div class="membro-info"><p>Amo Livros e Musicas</p></div>
-        </article>
-      </div>
-    </section>
+        </div>
 
-    <!--EVENTOS-->
-    <section id="eventos" class="secao">
-      <h2>Participação em Eventos</h2>
-      <div id="cards">
-        <article class="card-evento">
-          <h3>Visita Técnica — Senai São Caetano</h3>
-          <p>
-            Iremos visitar o Senai para conhecer a instituição, os laboratórios
-            e os cursos de TI.
-          </p>
-          <p>Dia 13/05/2026</p>
-        </article>
-      </div>
-    </section>
+        <div class="faq-item">
+          <button class="faq-title" type="button">Quem pode participar?</button>
 
-    <!--GALERIA-->
-    <section id="galeria" class="secao">
-      <h2>Bem-Vindo a nossa Galeria</h2>
-      <div id="card">
-        <article class="card-galeria">
-          <h3>Nossas Fotos</h3>
-        </article>
-      </div>
-    </section>
+          <div class="faq-content">
+            <p>
+              Alunos da turma do curso técnico de Desenvolvimento de Sistemas da
+              Escola Coronel Bonifácio de Carvalho.
+            </p>
+          </div>
+        </div>
 
-    <!--CONTATO-->
-    <section id="contato" class="secao">
-      <h2>Contatos</h2>
-      <p>
-        Luiz —
-        <a
-          href="https://api.whatsapp.com/send?phone=5511989017556&text=Ol%C3%A1!%20Tudo%20bem%3F%20%C3%89%20um%20prazer%20te%20conhecer."
-          target="_blank"
-          >(11) 98901-7556</a
-        >
-      </p>
-      <p>
-        <a
-          href="mailto:luizgabryel515@gmail.com?subject=Mensagem%20do%20site%202%C2%BADS&body=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20do%20grupo%202%C2%BADS.%0A%0ANome%3A%0AMensagem%3A"
-          target="_blank"
-          >luizgabryel515@gmail.com</a
-        >
-      </p>
-    </section>
+        <div class="faq-item">
+          <button class="faq-title" type="button">
+            Qual o objetivo do site?
+          </button>
 
-    <!--FOOTER-->
+          <div class="faq-content">
+            <p>
+              Mostrar projetos, eventos e informações relacionadas ao grupo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEMBROS -->
+      <section id="membros" class="secao">
+        <h2>Membros</h2>
+
+        <div id="grupo">
+          <!-- Luiz -->
+          <article class="membro" data-frase="XXXX">
+            <div class="avatar">
+              <img
+                src="./src/assets/luiz-icon.jpeg"
+                alt="Foto de Luiz Gabryel"
+              />
+            </div>
+
+            <p class="membro-nome">Luiz Gabryel</p>
+
+            <p class="membro-cargo">Estudante de DS</p>
+
+            <div class="membro-info">
+              <p>Gosta de programação e música.</p>
+            </div>
+          </article>
+
+          <!-- Viviane -->
+          <article
+            class="membro"
+            data-frase="'Não se esqueça de nada. Lembre-se de tudo e supere.' — Tudo bem não ser normal"
+          >
+            <div class="avatar">
+              <img
+                src="./src/assets/viviane-icon.jpeg"
+                alt="Foto de Viviane da Silva"
+              />
+            </div>
+
+            <p class="membro-nome">Viviane da Silva</p>
+
+            <p class="membro-cargo">Estudante de DS</p>
+
+            <div class="membro-info">
+              <p>Gosta de gatos e rap geek.</p>
+            </div>
+          </article>
+
+          <!-- Gustavo -->
+          <article class="membro" data-frase="XXXX">
+            <div class="avatar">
+              <img
+                src="./src/assets/gustavo-icon.jpeg"
+                alt="Foto de Gustavo Arcala"
+              />
+            </div>
+
+            <p class="membro-nome">Gustavo Arcala</p>
+
+            <p class="membro-cargo">Estudante de DS</p>
+
+            <div class="membro-info">
+              <p>Ama livros e músicas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EVENTOS -->
+      <section id="eventos" class="secao">
+        <h2>Participação em Eventos</h2>
+
+        <div id="cards">
+          <article class="card-evento">
+            <h3>Visita Técnica — SENAI São Caetano</h3>
+
+            <p>
+              Iremos visitar o SENAI para conhecer a instituição, os
+              laboratórios e os cursos da área de tecnologia.
+            </p>
+
+            <p><strong>Data:</strong> 13/05/2026</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALERIA -->
+      <section id="galeria" class="secao">
+        <h2>Bem-vindo à nossa galeria</h2>
+
+        <div id="card">
+          <article class="card-galeria">
+            <h3>Nossas Fotos</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="secao">
+        <h2>Contatos</h2>
+
+        <p>
+          Luiz —
+          <a
+            href="https://api.whatsapp.com/send?phone=5511989017556&text=Ol%C3%A1!%20Tudo%20bem%3F%20%C3%89%20um%20prazer%20te%20conhecer."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (11) 98901-7556
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="mailto:luizgabryel515@gmail.com?subject=Mensagem%20do%20site%202%C2%BADS&body=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20do%20grupo%202%C2%BADS.%0A%0ANome%3A%0AMensagem%3A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            luizgabryel515@gmail.com
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer>
       <p class="footer-titulo">Desenvolvido por</p>
+
       <div id="devs">
         <div class="dev">
-          <img
-            src="./src/assets/luiz-icon.jpeg"
-            id="foto-secreta"
-            alt="Foto secreta"
-          />
+          <img src="./src/assets/luiz-icon.jpeg" alt="Foto de Luiz Gabryel" />
+
           <p>Luiz - Aster</p>
         </div>
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <!-- Script -->
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
