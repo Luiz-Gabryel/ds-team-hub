@@ -120,18 +120,22 @@ export function initEaster() {
       if (!ativado5) {
         mostrarToast("Código do Gustavo ativado!");
         ativado5 = true;
-        const som = new Audio('./public/za_warudo.mp3'); //arumar dps ./src/sons/za_warudo.mp3
+        const som = new Audio('./public/za_warudo.mp3'); //arumar dps ./public/sons/za_warudo.mp3
         som.play();
         timerEscalaDeCinza = setTimeout(() => {
           document.body.style.filter = "grayscale(100%)";
         }, 4000);
-        
       } else {
         mostrarToast("Código do Gustavo desativado!");
+        alert('Tesste')
         ativado5 = false;
-        document.body.style.filter = "";
-
       }
+      // } else {
+      //   
+      //   ativado5 = false;
+      //   document.body.style.filter = "";
+      //   alert('Tesste')
+      // }
 
       digitado.length = 0;
     }
