@@ -26,6 +26,13 @@ export function initEaster() {
     document.body.style.filter = filtros.join(" ");
   }
 
+  function atualizarSecret() {
+    const secret = document.getElementById("secret");
+    const algumAtivo =
+      ativado1 || ativado2 || ativado3 || ativado4 || ativado5 || ativado6;
+    secret.style.display = algumAtivo ? "block" : "none";
+  }
+
   function mostrarToast(mensagem) {
     const toast = document.createElement("div");
 
@@ -45,6 +52,19 @@ export function initEaster() {
     setTimeout(() => {
       toast.remove();
     }, 3000);
+  }
+
+  function adicionarSecret(id, nome) {
+    const ul = document.getElementById("secret-ul");
+    const li = document.createElement("li");
+    li.id = id;
+    li.textContent = nome;
+    ul.appendChild(li);
+  }
+
+  function removerSecret(id) {
+    const li = document.getElementById(id);
+    if (li) li.remove();
   }
 
   const membros = document.querySelectorAll(".membro");
@@ -67,6 +87,10 @@ export function initEaster() {
     // 2DS
     if (texto.includes(codigo1.join(""))) {
       ativado1 = !ativado1;
+      ativado1
+        ? adicionarSecret("secret-2ds", "2DS")
+        : removerSecret("secret-2ds");
+      atualizarSecret();
 
       mostrarToast(
         ativado1 ? "Código do 2DS ativado!" : "Código do 2DS desativado!",
@@ -80,6 +104,10 @@ export function initEaster() {
     // O Trio
     if (texto.includes(codigo2.join(""))) {
       ativado2 = !ativado2;
+      ativado2
+        ? adicionarSecret("secret-otrio", "O Trio")
+        : removerSecret("secret-otrio");
+      atualizarSecret();
 
       mostrarToast(
         ativado2 ? "Código do O Trio ativado!" : "Código do O Trio desativado!",
@@ -92,11 +120,16 @@ export function initEaster() {
       });
 
       digitado.length = 0;
+      atualizarSecret();
     }
 
     // Luiz
     if (texto.includes(codigo3.join(""))) {
       ativado3 = !ativado3;
+      ativado3
+        ? adicionarSecret("secret-luiz", "Luiz")
+        : removerSecret("secret-luiz");
+      atualizarSecret();
 
       mostrarToast(
         ativado3 ? "Código do Luiz ativado!" : "Código do Luiz desativado!",
@@ -114,11 +147,16 @@ export function initEaster() {
       }
 
       digitado.length = 0;
+      atualizarSecret();
     }
 
     // Viviane
     if (texto.includes(codigo4.join(""))) {
       ativado4 = !ativado4;
+      ativado4
+        ? adicionarSecret("secret-viviane", "Viviane")
+        : removerSecret("secret-viviane");
+      atualizarSecret();
 
       mostrarToast(
         ativado4
@@ -127,12 +165,14 @@ export function initEaster() {
       );
 
       digitado.length = 0;
+      atualizarSecret();
     }
 
     // Gustavo
     if (texto.includes(codigo5.join(""))) {
       if (!ativado5) {
         mostrarToast("Código do Gustavo ativado!");
+        adicionarSecret("secret-gustavo", "Gustavo");
 
         ativado5 = true;
 
@@ -145,6 +185,7 @@ export function initEaster() {
         }, 4000);
       } else {
         mostrarToast("Código do Gustavo desativado!");
+        removerSecret("secret-gustavo");
 
         ativado5 = false;
 
@@ -154,17 +195,23 @@ export function initEaster() {
       }
 
       digitado.length = 0;
+      atualizarSecret();
     }
 
     // Aster
     if (texto.includes(codigo6.join(""))) {
       ativado6 = !ativado6;
+      ativado6
+        ? adicionarSecret("secret-aster", "Aster")
+        : removerSecret("secret-aster");
+      atualizarSecret();
 
       mostrarToast(
         ativado6 ? "Código do Aster ativado!" : "Código do Aster desativado!",
       );
 
       digitado.length = 0;
+      atualizarSecret();
     }
   });
 }
