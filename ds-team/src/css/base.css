@@ -16,7 +16,7 @@ body {
   padding-top: 100px;
   background-color: #190019;
   color: #fbe4d8;
-  transition: filter 0.3s ease; 
+  transition: filter 0.3s ease;
 }
 
 #home,
@@ -25,7 +25,8 @@ body {
 #eventos,
 #galeria,
 #contato,
-#faq {
+#faq,
+#secret {
   background-color: #2b124c;
   border-radius: 15px;
   padding: 20px;
